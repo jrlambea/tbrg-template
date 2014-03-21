@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>The Big Red Geek</title>
+
+        <!-- Meta -->
+        <meta name="description" content="{{meta_description}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Andrew E. Rhyne">
+        <meta name="keywords" content="TheBigRedGeek, Andrew E. Rhyne, Andrew Rhyne, JavaScript, Coffee, Tech, IT, HTML5, CSS3, C, C++">
+
+        <!-- CSS: Normalize sheet first, minify everything for production -->
+        <link rel="stylesheet" type='text/css' href="/assets/css/main.css"/>
+        <link rel="stylesheet" type='text/css' href="/assets/css/tbrg.css"/>
+
+        <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+
+        <!-- Font Awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        {{ghost_head}}
+
+    </head>
+
+    <body class="{{body_class}}">
+
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p>
+        <![endif]-->
+
+
+        <header id="site-header">
+            <div class="container">
+                {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+                <a href="{{@blog.url}}"  alt="Blog Title"><h1 class="blog-title heading">The Big <span class="red-title">Red</span> Geek</h1></a>
+                <p class="blog-description">{{@blog.description}}</p>
+            </div>
+        </header>
+
+
+        {{{body}}}
+
+
+        <footer id="site-footer">
+            <div class="container">
+              <section>&copy; <a href="/">Andrew E. Rhyne</a> {{date format='YYYY'}} | All rights reserved</section>
+              <a class="icon-rss" href="{{@blog.url}}/rss/" title="Get the RSS feed">
+                <i class="fa fa-rss"></i>
+              </a>
+              <a class="icon-twitter" href="https://twitter.com/thebigredgeek" title="Twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a class="icon-facebook" href="https://www.facebook.com/andrew.rhyne.33" title="Facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a class="icon-google-plus" href="https://plus.google.com/112869609553046295315" title="Google+">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </div>
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+        <script type="text/javascript" src="/assets/js/fittext.js"></script>
+
+        <script type="text/javascript">
+          $(".heading").fitText();
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-42320497-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        {{ghost_foot}}
+
+        <script type="text/javascript" src="/assets/js/index.js"></script>
+
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'tbredgeek'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        </script>
+
+    </body>
+
+</html>
