@@ -28,6 +28,8 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script type="text/javascript" src="/assets/js/lang-powershell.js"></script>
 
         {{ghost_head}}
 
@@ -43,7 +45,7 @@
         <header id="site-header">
             <div class="container">
                 {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-                <a href="{{@blog.url}}"  alt="Blog Title"><h1 class="blog-title heading">Spa<b>geek</b></h1></a>
+                <a href="{{@blog.url}}"  alt="Blog Title"><h1 class="blog-title heading">{{meta_title}}</b></h1></a>
                 <p class="blog-description">{{@blog.description}}</p>
             </div>
         </header>
